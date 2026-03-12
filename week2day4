@@ -1,0 +1,51 @@
+class Person:
+
+    def __init__(self, name, age, major):
+        self.name = name
+        self.age = age
+        self.major = major
+
+    def greet(self):
+        print("Hello, my name is", self.name, "and I am", self.age, "years old. My major is", self.major )
+
+
+person1 = Person("Sara", 20, "computer Science")
+person2 = Person("Salma", 22, "Electiric Engineering")
+
+person1.greet()
+person2.greet()
+
+#----------------------------------
+#Bank account system
+#---------------------------------
+class BankAccount:
+
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+        print("Deposit successful")
+
+    def withdraw(self, amount):
+
+        if amount > self.balance:
+            print("Insufficient funds")
+
+        else:
+            self.balance = self.balance - amount
+            print("Withdrawal successful")
+
+    def show_balance(self):
+        print("Owner:", self.owner)
+        print("Balance:", self.balance)
+
+
+account1 = BankAccount("Nadin", 2000)
+
+account1.deposit(400)
+account1.withdraw(100)
+account1.withdraw(3000)
+
+account1.show_balance()
