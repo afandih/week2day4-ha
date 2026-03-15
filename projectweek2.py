@@ -21,6 +21,8 @@ class BudgetTracker:
         print("Current Balance:", self.balance)
 
 
+print("Welcome to the Budget Tracker!")
+
 tracker = BudgetTracker()
 
 while True:
@@ -44,7 +46,7 @@ while True:
         tracker.show_balance()
 
     elif choice == "4":
-        print("Exiting program...")
+        print("Goodbye!")
         break
 
     else:
